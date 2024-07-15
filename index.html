@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinterest</title>
+    <link rel="shortcut icon" href="pictures/logo.png" type="image" >
+   <link rel="stylesheet" href="styles.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.min.css">
+<body>
+    <header>
+        <div class="logo-container">
+        <div class="logo">
+        <div class="logo-image"><img src="pictures/logo.png" alt="" height="32px" ></div>
+        <h1 class="logo-text" style="font-size: 20px;"><p>Pinterest</p></h1>
+    </div>
+</div>
+
+   <nav>
+    <ul class="nav-links" >
+        <li><a href="#watch"><strong>Watch</strong></a></li>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;
+        <li><a href="#explore"><strong>Explore</strong></a></li>
+
+    </ul>
+   </nav>
+
+   <nav>
+    <ul class="nav-link">
+        <li><a href="#about"><strong>ABOUT</strong></a></li>&nbsp&nbsp
+        <li><a href="#business"><strong>BUSINESS</strong></a></li>&nbsp&nbsp
+        <li><a href="#blog"><strong>BLOG</strong></a></li>
+    </ul>
+  
+</nav>
+
+<div class="button">
+    <button id="btn1" > LOGIN</button>&nbsp&nbsp
+    <button id="btn2">SIGNUP </button>
+</div>
+
+</header>    
+<!-- MAIN PAGE  -->
+<div id="watch" class="body-A">
+    <div class="header">
+      <h1>Get your next</h1>
+      <p id="changingHeading">weeknight dinner idea</p>
+    </div>
+    <div class="grid-layout-container">
+      <div class="pictures">
+        <img src="" alt="" id="item1" width="250px" height="322px">
+      </div>
+      <div class="pictures">
+        <img src="" alt="" id="item2" width="250px" height="322px">
+      </div>
+      <div class="pictures">
+        <img src="" alt="image" id="image" width="250px" height="322px">
+      </div>
+      <div class="pictures">
+        <img src="" alt="" id="item4" width="250px" height="322px">
+      </div>
+      <div class="pictures">
+        <img src="" alt="" id="item5" width="250px" height="322px">
+      </div>
+      <div class="pictures">
+        <img src="" alt="" id="item6" width="250px" height="322px">
+      </div>
+    </div>
+  </div>
+  <!-- MAIN PAGE JAVA -->
+  <script>
+    const images = ['images-main/8.jpg', 'images-main/1.jpg', 'images-main/12.jpeg','images-main/20.jpg']; // Add your image URLs here
+    let currentIndex = 0;
+    const imageElement = document.getElementById('image');
+
+    setInterval(() => {
+        currentIndex = (currentIndex + 1) % images.length;
+        imageElement.src = images[currentIndex];
+    }, 3000); // Change image every second (1000 milliseconds)
+
+    
+    const item1s = ['images-main/7.jpg', 'images-main/2.jpg', 'images-main/13.jpeg','images-main/16.jpeg']; // Add your image URLs here
+    let currentIndex1 = 0;
+    const item1Element = document.getElementById('item1');
+
+    setInterval(() => {
+        currentIndex1 = (currentIndex1 + 1) % item1s.length;
+        item1Element.src = item1s[currentIndex1];
+    }, 3000); // Change image every second (1000 milliseconds)
+
+    const item2s = ['images-main/10.jpg', 'images-main/3.jpg', 'images-main/14.jpeg','images-main/19.jpg']; // Add your image URLs here
+    let currentIndex2 = 0;
+    const item2Element = document.getElementById('item2');
+
+    setInterval(() => {
+        currentIndex2 = (currentIndex2 + 1) % item2s.length;
+        item2Element.src = item2s[currentIndex2];
+    }, 3000); // Change image every second (1000 milliseconds)
+
+    const item4s = ['images-main/11.jpg', 'images-main/4.jpg', 'images-main/15r.jpg','images-main/18.jpg']; // Add your image URLs here
+    let currentIndex4 = 0;
+    const item4Element = document.getElementById('item4');
+
+    setInterval(() => {
+        currentIndex4 = (currentIndex4+ 1) % item4s.length;
+        item4Element.src = item4s[currentIndex4];
+    }, 3000); // Change image every second (1000 milliseconds)
+
+    const item5s = ['images-main/22.jpeg', 'images-main/24.jpeg', 'images-main/0.jpeg','images-main/17.jpeg']; // Add your image URLs here
+    let currentIndex5 = 0;
+    const item5Element = document.getElementById('item5');
+
+    setInterval(() => {
+        currentIndex5 = (currentIndex5+ 1) % item5s.length;
+        item5Element.src = item5s[currentIndex5];
+    }, 3000); // Change image every second (1000 milliseconds)
+
+    const item6s = ['images-main/23.jpeg', 'images-main/25.jpeg', 'images-main/27.jpeg','images-main/21.jpg']; // Add your image URLs here
+    let currentIndex6 = 0;
+    const item6Element = document.getElementById('item6');
+
+    setInterval(() => {
+        currentIndex6 = (currentIndex6+ 1) % item6s.length;
+        item6Element.src = item6s[currentIndex6];
+    }, 3000); // Change image every second (1000 milliseconds)
+    
+    // for changing the heading text
+const headings = ['weeknight dinner idea', 'green thumb idea', 'home decor idea', 'new look outfit'];
+let currentIndexH = 0;
+const headingElement = document.getElementById('changingHeading');
+
+setInterval(() => {
+  currentIndexH = (currentIndexH + 1) % headings.length;
+  headingElement.textContent = headings[currentIndexH];
+}, 3000); // Change heading every 1000ms (1 second)
+</script>
+<div class="main-foot">
+    <p>Here's how it works</p>
+</div>
+
+<!-- page 1 -->
+<section id="explore">
+<div  class="body-R">
+  <div class="split-right-romaisa">
+      <h2 class="h2-romaisa">Search for an idea</h2>
+      <p id="para-romaisa">What do you want to try next? Think <br>of something you're into-----like "easy <br>chicken dinner"-----and see you what you find</p>
+      <button class="button-romaisa"><b>Explore</b></button>
+  </div>
+
+  <div class="grid-container-romaisa">
+      <div class="images">
+          <img src="images-R/left-ccce7532.png" alt="" id="img1-romaisa" width="200px">
+      </div>
+      <div class="images">
+          <img src="images-R/topRight-6902088a.png" alt="" id="img2-romaisa" width="190px">
+          <div class="overlay-text">
+          <button id="easy-pesey"><i class="ri-search-line">easy chicken dinner</i></button>
+      </div>
+      </div>
+      <div class="images">
+          <img src="images-R/center-2d76a691.png" alt="" id="img3-romaisa" width="290px" height="450px">
+      </div>
+      <div class="images">
+          <img src="images-R/right-2bd1edfc.png" alt="" id="img4-romaisa" width="180">
+      </div>
+  </div>
+</div>
+</section>
+<!-- JAVA -->
+<!-- <script>
+  body-R.scrollIntoView({
+    behavior:"smooth",
+    images:"end"
+  })
+</script> -->
+
+<!-- page-2  -->
+<div id="business" class="body-rumi">
+  <div class="split-left">
+      <h2>Save Ideas You Like</h2>
+      <p id="para">Collect your favorites so you can<br> get back to them later. </p>
+      <button><b>Explore</b></button>
+  </div>
+
+      <!-- FIRST IMAGE  -->
+   <div class="grid-container-rumi">
+      <div class="image1-rumi">
+          <img src="images-rumi/future-home-vibes-fd224806.png" alt="" id="backgroundimg" width="385" height="420">
+          <p class="text-block"><h4>Fern Future <br> Home Vibes</h4></p>
+      </div>
+      <div class="small-pic">
+          <img src="images-rumi/future-home1-796541ba.png" alt="" id="pic1" width="85">
+      </div>
+      <div class="small-pic">
+          <img src="images-rumi/future-home2-1fb36304.png" alt="" id="pic2" width="85">
+      </div>
+      <div class="small-pic">
+          <img src="images-rumi/future-home3-865bc67f.png" alt="" id="pic3" width="85">
+      </div>
+      <!-- SECOND IMAGE  -->
+      <div class="image2-rumi">
+          <img src="images-rumi/scandinavian-bedroom-0fe87b61.png" alt="" id="image2" width="235">
+          <p class="text-block2"><h5>MY <br>Scandinavian <br>bedroom</h5></p>
+      </div>
+      <!-- THIRD IMAGE  -->
+      <div class="image3-rumi">
+          <img src="images-rumi/deck-of-dreams-a480821d (1).png" alt="" id="image3" width="160">
+          <p class="text-block3"><h5>The Deck of <br>My Dreams</h5></p>
+      </div>
+      <!-- FOURTH IMAGE  -->
+      <div class="image4-rumi">
+          <img src="images-rumi/bathroom-upgrade-ad23a104.png" alt="" id="image4" width="235">
+          <p class="text-block4"><h5>Our <br>Bathroom <br>upgrades</h5></p>
+      </div>
+      <!-- FIFTH IMAGE  -->
+      <div class="image5-rumi">
+          <img src="images-rumi/serve-my-drinks-aa067901.png" alt="" id="image5" width="230">
+          <p class="text-block5"><h5>Serve my <br>Drinks in <br>Style</h5></p>
+      </div>
+  </div>
+</div>
+
+
+<!-- PAGE 3 -->
+<div id="Sameen" class="body-sam">
+<div> 
+    <div id="blog" class="container">
+        <div><img src="images.sam/img1.png" alt="Big Picture" class="big-picture"></div>
+       <div> <img src="images.sam/img2.png" alt="Small Picture" class="small-picture"></div>
+        <div><img src="images.sam/img3.png" alt="Third Picture" class="smaller-picture"></div>
+    </div>
+    <div class="container1">
+        <div class="text">
+          <h3>See it,make it,try it,do it</h3><br>
+          <div class="para-sam"><h6><small> The best part of the Pinterest is discovering 
+            new things and ideas from people around the world.</small></h6></div>
+
+            <button class="button-sameen">Explore</button>
+        </div>
+      </div>  
+</div>
+</div>
+
+
+<!-- FOOTER  -->
+<footer id="about">
+    <div  class="backgroundImg">
+        <img src="pictures/backgroundimg.jpg" height="100%" width="100%" alt="" id="bkgImg">
+    </div>
+  
+<div class="footer">
+    <h2>WELCOME TO PINTEREST</h2>
+    <p id="paragraph">Find new ideas to try...</p>
+   
+    <form action="#">
+        <div class="input-field">
+            EMAIL:<BR>
+            <input type="email" id="email" placeholder="UserEmail" required>
+             <i class="bx bxs-user"></i>
+        </div>
+        
+        <div class="input-field">
+            PASSWORD:<BR>
+            <input type="password" id="password" placeholder="CreatePassword" required>
+             <i class="bx bxs-lock-alt"></i>
+        </div>
+        
+        <div class="input-field">
+            BIRTHDATE:<BR>
+            <input type="date" id="date" placeholder="BirthDate" required>
+             <i class="bx bxs-date"></i>
+        </div>
+        <br>
+       <button type="submit" class="continue">Continue</button>
+       <br>
+       <h4>OR</h4>
+       
+       <button type="submit" class="google"><i class="ri-google-fill"></i>&nbsp&nbsp&nbsp&nbspContinue With Google</button><br><br>
+       <div class="paragraph">
+       <p>By continuing you agree to pinterest <br><b> Terms of service </b> and acknowledge you have read our<br> <b>Privacy Policy. notice at collection.</b></p>
+    </div>
+       <br>
+       <div class="links"><a href="#" class="LOGIN"><p>Already a member?Login</p></a></div><br><br><br><br>
+       <!-- <div class="bottom-text">
+        <h5>Create your free business account </h5>
+       </div> -->
+    </form>
+</div>
+<div class="center-text">
+    <h1>Sign Up To <br>Get Your<br> Ideas</h1>
+  </div>
+</footer>
+</body>
+</html>
